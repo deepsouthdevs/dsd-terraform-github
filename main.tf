@@ -4,12 +4,6 @@ provider "aws" {
 
 terraform {
   required_version = "~> 1.5"
-
-  # backend "s3" {
-  #   region  = "eu-west-1"
-  #   encrypt = true
-  # }
-
   backend "local" {
     path = "terraform.tfstate"
   }
@@ -21,8 +15,8 @@ terraform {
     }
   }
 }
+
 provider "github" {
   token = var.github_token
   owner = var.github_org
 }
-
