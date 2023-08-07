@@ -14,9 +14,8 @@ members = [
   # },
   {
     "username" = "theonlysinjin",
-    "squad_role" = {
-      "global-readonly" = "maintainer",
-      "sre-admins"      = "maintainer"
+    "team_role" = {
+      "engineering-admins"      = "member"
     }
   },
   # {

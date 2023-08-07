@@ -15,7 +15,6 @@ resource "github_repository" "repo" {
   archive_on_destroy                      = each.value.repository_config.archive_on_destroy
   archived                                = each.value.repository_config.archived
   auto_init                               = each.value.repository_config.auto_init
-  default_branch                          = each.value.repository_config.default_branch
   delete_branch_on_merge                  = each.value.repository_config.delete_branch_on_merge
   gitignore_template                      = each.value.repository_config.gitignore_template
   has_discussions                         = each.value.repository_config.has_discussions

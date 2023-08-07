@@ -1,4 +1,4 @@
-parent = [
+parent_teams = [
   {
     name        = "engineering"
     description = "Software Engineering - Managed by Terraform"
@@ -6,7 +6,7 @@ parent = [
   }
 ]
 
-squad_roles = [
+teams = [
   {
     name        = "engineering-admins"
     description = "Admins in Engineering - Managed by Terraform"

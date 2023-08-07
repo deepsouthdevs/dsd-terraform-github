@@ -6,7 +6,7 @@ variable "github_token" {
   type = string
 }
 
-variable "parent" {
+variable "parent_teams" {
   type = list(object({
     name        = string
     description = string
@@ -14,7 +14,7 @@ variable "parent" {
   }))
 }
 
-variable "squad_roles" {
+variable "teams" {
   type = list(object({
     name        = string
     description = string
@@ -25,8 +25,8 @@ variable "squad_roles" {
 
 variable "members" {
   type = list(object({
-    username   = string
-    squad_role = map(string)
+    username  = string
+    team_role = map(string)
   }))
 }
 
@@ -43,7 +43,6 @@ variable "repositories" {
       archive_on_destroy                      = optional(bool)
       archived                                = optional(bool, false)
       auto_init                               = optional(bool)
-      default_branch                          = optional(string)
       delete_branch_on_merge                  = optional(bool, false)
       gitignore_template                      = optional(string)
       has_discussions                         = optional(bool, false)

@@ -9,18 +9,6 @@ locals {
     ]
   ])
 
-  # global_roles = distinct(flatten([
-  #   for repo in var.repositories : [
-  #     for role in var.global_permissions : [
-  #       for role_name, permission in role["repository_role"] : {
-  #         repository_name = repo.repository_name
-  #         role_name       = role_name
-  #         permission      = permission
-  #       }
-  #     ]
-  #   ]
-  # ]))
-
   all_roles = distinct(
     flatten(
       concat(
@@ -32,7 +20,7 @@ locals {
 }
 
 resource "github_team_repository" "repository_team_permissions" {
-  depends_on = [github_team.squad_roles]
+  depends_on = [github_team.team]
   for_each = {
     for index, role_map in local.all_roles :
     "${role_map.repository_name}-${role_map.role_name}-${role_map.permission}" => role_map
