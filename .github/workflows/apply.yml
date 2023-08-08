@@ -45,5 +45,5 @@ jobs:
       - name: Upload Terraform state
         uses: devgioele/terraform-state-artifact@v4
         with:
-          passphrase: ${{ secrets.TF_STATE_PASS }}
+          passphrase: ${{ secrets.TF_STATE_PASSPHRASE }}
           download_upload: upload
