@@ -1,3 +1,4 @@
+# Adapted from https://github.com/marketplace/actions/hashicorp-setup-terraform
 name: terraform plan
 
 on:
@@ -36,6 +37,7 @@ jobs:
           TF_VAR_github_org: deepsouthdevs-github
           TF_VAR_github_token: ${{ secrets.ACCESS_TOKEN }}
 
+## To Comment a PR with a nicely formatted response - Untested ##
       - uses: actions/github-script@v6
         if: github.event_name == 'pull_request'
         env:
