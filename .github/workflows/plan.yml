@@ -2,9 +2,7 @@
 name: terraform plan
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
 
 permissions:
   pull-requests: write
@@ -15,6 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: hashicorp/setup-terraform@v2
+
+      - name: Download Terraform state
+        uses: devgioele/terraform-state-artifact@v4
+        with:
+          passphrase: ${{ secrets.TF_STATE_PASSPHRASE }}
+          download_upload: download
 
       - name: Terraform fmt
         id: fmt
