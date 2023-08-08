@@ -9,6 +9,7 @@ resource "github_team" "pt" {
   privacy     = "closed"
 }
 
+
 # resource "github_team_repository" "pt-project1" {
 #   repository = "Project1"
 #   team_id    = github_team.pt.id
