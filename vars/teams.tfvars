@@ -1,22 +1,10 @@
-parent_teams = [
-  {
-    name        = "engineering"
-    description = "Software Engineering - Managed by Terraform"
-    privacy     = "closed"
-  }
-]
-
 teams = [
   {
-    name        = "engineering-admins"
-    description = "Admins in Engineering - Managed by Terraform"
-    privacy     = "closed"
-    parent_team = "engineering"
+    name        = "CosmicCanvas-DevTeam"
+    description = "The cosmic creators behind the digital universe of NebulaFusion"
   },
   {
-    name        = "engineering-users"
-    description = "Software Engineers - Managed by Terraform"
-    privacy     = "closed"
-    parent_team = "engineering"
-  },
+    name        = "NebulaFusion-DevTeam"
+    description = "The development powerhouse behind NebulaFusion, driving innovation in cosmic collaboration"
+  }
 ]

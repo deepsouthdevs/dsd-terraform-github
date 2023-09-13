@@ -4,6 +4,7 @@ provider "aws" {
 
 terraform {
   required_version = "~> 1.4"
+  # Consider using a remote backed, e.g. S3 & dynamodb
   backend "local" {
     path = "terraform.tfstate"
   }
