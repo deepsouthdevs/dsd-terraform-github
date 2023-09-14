@@ -1,4 +1,4 @@
-# dsd-terraform-github
+# terraform-github-demo
 Generate a new classic auth token, [here](https://github.com/settings/tokens)  
 
 ```bash
